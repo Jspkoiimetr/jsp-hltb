@@ -1,0 +1,31 @@
+{
+  "name": "@jspkoi/hltb",
+  "version": "1.0.0",
+  "exports": "./mod.ts",
+  "tasks": {
+    "dev": "deno run --watch main.ts",
+    "test": "deno test --allow-read --allow-net"
+  },
+  "imports": {
+    "@b-fuze/deno-dom": "jsr:@b-fuze/deno-dom@0.1.48",
+    "@std/assert": "jsr:@std/assert@1",
+    "fast-levenshtein": "npm:fast-levenshtein@3.0.0",
+    "user-agents": "npm:user-agents@1.1.328"
+  },
+  "compilerOptions": {
+    "strict": true
+  },
+  "include": [
+    "src/main/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "publish": {
+    "exclude": [
+      "node_modules",
+      "src/test",
+      ".github/"
+    ]
+  }
+}
